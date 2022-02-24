@@ -1,0 +1,22 @@
+<h2>commande Details</h2> 
+
+<hr/>
+<div *ngIf="commande">
+  <div>
+    <label><b>dateCommande: </b></label> {{commande.dateCommande | date:'dd/MM/yyyy'}}
+  </div>
+  
+  <div>
+    <label><b>id du client: </b></label> {{commande.client.cId}}
+  </div>  
+  <div>
+    <label><b>Prénom du client: </b></label> {{commande.client.prenom}}
+  </div>
+  <div>
+    <label><b>nom du client: </b></label> {{commande.client.nom}}
+  </div> 
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to commande List</button><br> 

@@ -1,0 +1,26 @@
+<h3>Create facture</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group"> 
+      <label for="datefacture">date de facture</label>
+      <input type="date" class="form-control" id="datefacture" required [(ngModel)]="facture.datefacture" name="datefacture">
+    </div>
+    
+ <div class="form-group">
+      <label for="modePaiement">mode de Paiement</label>
+      <input type="text" class="form-control" id="modePaiement" required [(ngModel)]="facture.modePaiement" name="modePaiement">
+    </div>
+
+    <div class="form-group">
+      <label for="commandesfacture">id Commande</label>
+      <input type="text" class="form-control" id="commandesfacture" required [(ngModel)]="facture.commandesfacture.cmId" name="commandesfacture">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>  
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newfacture()">Add</button> --> 
+</div>

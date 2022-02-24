@@ -1,0 +1,26 @@
+<h3>Update Fournisseur</h3>
+<div style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" class="form-control" id="nom" required [(ngModel)]="fournisseur.nom" name="Nom">
+      </div>
+      <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input type="text" class="form-control" id="prenom" required [(ngModel)]="fournisseur.prenom" name="Prénom">
+      </div>
+      <div class="form-group">
+        <label for="adresse">Adresse</label>
+        <input type="text" class="form-control" id="adresse" required [(ngModel)]="fournisseur.adresse" name="adresse">
+      </div>
+  
+      <div class="form-group">
+        <label for="tel">tel</label>
+        <input type="text" class="form-control" id="tel" required [(ngModel)]="fournisseur.tel" name="tel">
+      </div>
+  
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+    
+

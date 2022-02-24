@@ -1,0 +1,35 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>CommandeProduit List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>Quantitée commandée</th>
+            <th>total</th>
+            <th>désignation du produit</th>
+            <th>date de commande</th>
+            <th>Actions</th> 
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let commandeProduit of commandeProduits | async">
+            <td>{{commandeProduit.id}}</td>
+            <td>{{commandeProduit.qteCom}}</td>
+            <td>{{commandeProduit.prix}}</td>
+            <td>{{commandeProduit.produitcmd.designation}}</td>
+            <td>{{commandeProduit.commandecmd.dateCommande}}</td> 
+            
+            <td><button (click)="dellCommandeProduit(commandeProduit.id)" class="btn btn-danger">Delete</button>
+                <button (click)="commandeProduitDetails(commandeProduit.id)" class="btn btn-info" style="margin-left: 10px">Details</button> 
+                <button (click)="updateCommandeProduit(commandeProduit.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+
+              </td> 
+          </tr>
+        </tbody>
+      </table> 
+    </div>
+  </div>
+

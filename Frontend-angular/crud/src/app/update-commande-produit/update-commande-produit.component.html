@@ -1,0 +1,32 @@
+<h3>Update CommandeProduit</h3>
+<div style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+      
+  
+      <div class="form-group">
+        <label for="prix">Prix</label>
+        <input type="text" class="form-control" id="prix" required [(ngModel)]="commandeProduit.prix" name="prix">
+      </div>
+  
+      <div class="form-group">
+        <label for="qteCom">qteCom</label>
+        <input type="text" class="form-control" id="qteCom" required [(ngModel)]="commandeProduit.qteCom" name="qteCom">
+      </div>
+      
+    
+
+    <div class="form-group">
+      <label for="produit ">produit </label>
+      <input type="text" class="form-control" id="produit " required [(ngModel)]="commandeProduit.produitcmd.pId " name="produit ">
+    </div>
+
+    <div class="form-group">
+      <label for="commande">commande</label>
+      <input type="text" class="form-control" id="commande" required [(ngModel)]="commandeProduit.commandecmd.cmId" name="commande">
+    </div>
+  
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+    
+

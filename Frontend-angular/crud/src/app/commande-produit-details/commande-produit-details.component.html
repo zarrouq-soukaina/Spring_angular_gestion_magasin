@@ -1,0 +1,33 @@
+<h2>commande Details</h2> 
+
+<hr/>
+<div *ngIf="commandeProduit">
+    <div>
+        <label><b>Id: </b></label> {{commandeProduit.id}}
+      </div>
+  <div>
+    <label><b>Quantitée commandée: </b></label> {{commandeProduit.qteCom}}
+  </div>
+  <div>
+    <label><b>Total: </b></label> {{commandeProduit.prix}}
+  </div> 
+  <div>
+    <label><b>désignation du produit: </b></label> {{commandeProduit.produitcmd.designation}}
+  </div>  
+  <div>
+    <label><b>TVA du produit: </b></label> {{commandeProduit.produitcmd.tva}}
+  </div>
+  <div>
+    <label><b>Id  de commande: </b></label> {{commandeProduit.commandecmd.cmId}}
+  </div> 
+  <div>
+    <label><b>date  de commande: </b></label> {{commandeProduit.commandecmd.dateCommande}}
+  </div>
+  <div>
+    <label><b>nom  de client: </b></label> {{commandeProduit.commandecmd.client.nom}}
+  </div> 
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to commande List</button><br> 

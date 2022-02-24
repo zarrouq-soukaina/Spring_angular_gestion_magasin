@@ -1,0 +1,22 @@
+<h2>Facture Details</h2> 
+
+<hr/>
+<div *ngIf="facture">
+    <div>
+        <label><b>Id: </b></label> {{facture.fId}}
+      </div>
+  <div>
+    <label><b>mode de paiement: </b></label> {{facture.modePaiement}}
+  </div>
+  <div>
+    <label><b>date de facture: </b></label> {{facture.datefacture | date:'dd/MM/yyyy'}}
+  </div> 
+  <div>
+    <label><b>Id de facture: </b></label>{{facture.commandesfacture.cmId}}
+  </div>  
+  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Produit List</button><br> 
